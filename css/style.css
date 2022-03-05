@@ -1,143 +1,190 @@
-*{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  width: 330px;
+  background-color: hsl(216, 50%, 16%);
+  margin: 50px auto;
+  border-radius: 12px;
   box-sizing: border-box;
 }
-:root {
-  --main-Soft-blue: hsl(215, 51%, 70%);
-  --main-Cyan: hsl(178, 100%, 50%);
-  --main-Very-dark-blue: hsl(217, 54%, 11%);
-  --main-Very-dark-blu: hsl(216, 50%, 16%);
-  --main-Very-dark-blue: hsl(215, 32%, 27%);
-  --main-White: hsl(0, 0%, 100%);
-}
-body {
-background-color: var(--main-Very-dark-blu);
-font-family: 'Outfit', sans-serif;  
-}
-/* Small */
-@media (min-width: 768px) {
+
 .container {
-  width: 750px;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-}
-/* Medium */
-@media (min-width: 992px) {
-.container {
-  width: 970px;
-}
-}
-/* Large */
-@media (min-width: 1200px) {
-.container {
-  width: 1170px;
-}
-}
-.container {
-width: 293px;
-margin: auto;
-text-align: center;
-}
-.container .wrapper {
-padding-top: 40px;
-padding-bottom: 40px;
-}
-.container .coin {
+
+.nft-img {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-wrap: wrap;
   position: relative;
-  background-color: var(--main-Very-dark-blue);
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  /* background-color: cyan; */
+}
+
+.layer {
+  background-color: cyan;
   width: 290px;
-  height: 510px;
-  box-shadow: -1px 15px 30px -12px black ;
-  transform:translatex(-50) ;
-  -webkit-transform:translatex(-50) ;
-  -moz-transform:translatex(-50) ;
-  -ms-transform:translatex(-50) ;
-  -o-transform:translatex(-50) ;
-}
-.container .coin .one {
-  height: 270px;
-  width: 270px;
-  margin-top: 20px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-.container h2 {
-  color: var(--main-White);
-  left: 0;
-  font-size: 18px;
-  margin-right: 120px;
-}
-.container .two {
-  color: var(--main-Soft-blue);
-  margin-top: -10px;
-  display: block;
-}
-.container .data {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 10px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  font-weight: 700;
-}
-.container .span {
-  margin-right: 10px;
-}
-.container .span-two {
-  color: aqua;
-  
-}
-.container .hr {
-  width: 270px;
-  border-color: hsl(215, 32%, 27%);
-}
-.container .photo {
-  padding-right: 5px;
-  margin-bottom: -3px;
-}
-.container .photo-two {
-  padding: 0%;
-  margin-bottom: -3px;
-}
-.container .last {
-  display: flex;
-  justify-content: space-between;
-  margin-top: -20px;
-}
-.container .last-one {
-  height: 40px;
-  border: 1px solid white;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  margin-left: 25px;
+  height: 290px;
   position: absolute;
-  margin-top: 20px;
+  z-index: 1;
+  border-radius: 12px;
+  margin: 50% auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
 }
-.container .last .creat {
-  text-align: center;
-  position:absolute;
-  margin-left: 100px;
-  margin-top: 30px;
+
+.layer img {
+  width: 70px;
+  height: 70px;
+}
+
+/* .detail {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+} */
+
+.nft-img img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 12px;
+  padding: 5px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.description {
+  padding: 8px;
+}
+
+.description h3 {
+  font-weight: 600;
+  color: white;
+  margin: 6px 0;
+}
+
+.description p {
+  font-weight: 300;
+  font-size: 18px;
+  color: hsl(215, 51%, 70%);
+  margin: 15px 0;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* margin: 14px 0; */
+  padding: 8px;
+}
+
+.info .price {
+  display: flex;
+  width: 50%;
+}
+
+.info .price h4 {
+  color: cyan;
+  font-weight: 600;
+}
+
+.info .price img {
+  margin-right: 5px;
+}
+
+.info .time {
+  display: flex;
+  width: 50%;
+  justify-content: end;
+}
+
+.info .time img {
+  margin-right: 5px;
+}
+
+.info .time p {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+}
+
+.card .container .line {
+  /* display: block; */
+  width: 95%;
+  /* border: 0.1px solid hsl(215, 51%, 70%); */
+  border-top: 0.1px;
+  margin: 15px 5px 10px 5px;
+  opacity: 0.5;
+}
+
+.user {
+  display: flex;
+  padding: 2px 4px;
+  align-items: center;
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 5px;
+}
+
+.user img {
+  max-width: 8%;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin-right: 14px;
+}
+
+.user p {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.user p span {
   color: white;
 }
-.container .last-last {
-  color: hsl(215, 51%, 70%);
-  padding-right: 4px;
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
+/* active */
+.description h3:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
 
+.user p span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
 
+.layer:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
 
